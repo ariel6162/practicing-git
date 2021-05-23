@@ -1,35 +1,30 @@
 // var Calculator = [a,b];
 
+function Calculator (a,b)
 {
-
-
+    this.a = a;
+    this.b = b;
 }
+
+
+Calculator.prototype.add = function () {
+    return this.a + this.b;
+}
+Calculator.prototype.subtract = function () {
+    return this.a - this.b;
+}
+Calculator.prototype.multiply = function () {
+    return this.a * this.b;
+}
+Calculator.prototype.log = function () {
+    console.log(' The sum is ' + this.add() );
+    console.log(' The difference is ' + this.subtract() );
+    console.log(' The product is ' + this.multiply() );
 }
 
-
+var p1 = new Calculator(5,10);
+var p2 = new Calculator(8,20);
 
 p1.log();
 p2.log();
 
-// console.log('hello world!');
-// var car = [1, 2, 3];
-// car.x = 20;
-// car.y = 29;
-
-
-// function Person(firstName, lastName)
-// {
-//     this.firstName = firstName;
-//     this.lastName = lastName;
-//     console.log("a");
-// }
-// Person.prototype.log = function(){
-//     console.log(this.firstName);
-// }
-// var p1 = new Person('ariel', 'kitov');
-// var p2 = new Person('dani', 'kitov');
-
-// p1.log();
-// p2.log();
-
-// console.log(typeof(car));
