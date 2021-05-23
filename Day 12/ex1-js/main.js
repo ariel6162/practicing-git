@@ -1,5 +1,3 @@
-// var Calculator = [a,b];
-
 function Calculator (a,b)
 {
     this.a = a;
