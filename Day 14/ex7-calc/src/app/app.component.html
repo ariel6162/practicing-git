@@ -8,4 +8,8 @@ B
 </div>
 
 <button (click)="go()" >Go!</button>
-<h1>{{a}}</h1>
+<div *ngIf="show">
+<h1>{{this.a}} + {{this.b}} = {{this.sum}}</h1>
+<h1>{{this.a}} - {{this.b}} = {{this.dif}}</h1>
+<h1>{{this.a}} * {{this.b}} = {{this.prd}}</h1>
+</div>

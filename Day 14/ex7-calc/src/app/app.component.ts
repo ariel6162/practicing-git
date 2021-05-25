@@ -9,35 +9,40 @@ export class AppComponent {
     // data
     a: string = '';
     b: string = '';
-    results: string[] = [];
+    sum: number = 0;
+    dif: number = 0;
+    prd: number = 0;
+    show: boolean = false;
 
 
     // methods
     setA(value: string) {
         this.a = value;
+        this.show = false;
     }
     setB(value: string) {
         this.b = value;
+        this.show = false;
     }
 
 
     add() {
-        let result = Number(this.a) + Number(this.b); 
-        console.log(result);
+        this.sum = Number(this.a) + Number(this.b);
     }
     sub() {
-        let result = Number(this.a) - Number(this.b); 
-        console.log(result);
+        this.dif = Number(this.a) - Number(this.b);
+
     }
     mlt() {
-        let result = Number(this.a) * Number(this.b); 
-        console.log(result);
+        this.prd = Number(this.a) * Number(this.b);
+
     }
 
     go() {
         this.add();
         this.sub();
         this.mlt();
+        this.show = true;
     }
 }
 
